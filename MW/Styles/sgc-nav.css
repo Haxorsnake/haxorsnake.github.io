@@ -1,0 +1,22 @@
+nav#landmarks {
+    display:none;
+}
+
+nav#page-list {
+    display:none;
+}
+
+
+ol {
+    list-style-type: none;
+
+}
+
+li {
+    font-size: 22px;
+}
+
+a {
+    color: #8dcae2;
+    text-decoration: none;
+}

@@ -1,0 +1,124 @@
+@page {
+    margin-bottom: 5pt;
+    margin-top: 5pt
+    }
+
+    :root {
+    	--main-bg-color: #182026;
+        --main-off-color: #7B9AA6;
+        --scrollbar-color: #283640;
+        --scrollbar-off-color: #436073;
+    }
+
+
+    h1, h2, h3, h4, h5, h6 {
+    	font-family: "Tahoma"
+    	padding:0px;
+    	margin: 0px;
+    }
+
+    h1 {
+    	font-family: "Tahoma";
+        font-weight: bold;
+    	font-size: 45px;
+    	text-align: center;
+    	color: var(--main-off-color)
+    }
+
+    hr {
+    	display: none
+    }
+
+    h2 {
+    	font-family: helvetica;
+        font-weight: bold;
+    	font-size: 30px;
+    	color: var(--main-off-color)!important;
+    }
+
+    h3 {
+    	font-family: "font2";
+        font-weight: bold;
+    	font-size: 30px;
+    }
+
+    h4 {
+    	font-family: "font2";
+        font-weight: bold;
+        font-style: italic;
+    	font-size: 30px;
+    }
+
+    h5 {
+    	font-family: "font2";
+        font-weight: bold;
+        font-style: italic;
+    	font-size: 25px;
+    }
+
+    h6 {
+    	font-family: "font2";
+        font-weight: bold;
+        font-style: italic;
+    	font-size: 20px;
+    }
+
+    div	{
+        text-indent: 3%
+    }
+
+    p {
+    	color: var(--main-off-color)!important;
+    	text-indent: 0;
+        display: block;
+    	font-size: 23px;
+    	line-height: 1.42857;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    body {
+    	background-color: var(--main-bg-color)!important;
+    	font-family: "Tahoma";
+    	line-height: 1.42857;
+    	margin-left: 10%;
+    	margin-right: 10%;
+    	margin-bottom: 5%;
+    	margin-top: 5%;
+    }
+
+    ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+    }
+    ::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-color);
+        border: 0px none #ffffff;
+        border-radius: 0px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--scrollbar-color);
+    }
+    ::-webkit-scrollbar-thumb:active {
+        background: var(--scrollbar-color);
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--main-bg-color);
+        border: 0px none #ffffff;
+        border-radius: 0px;
+    }
+    ::-webkit-scrollbar-track:hover {
+        background: var(--main-bg-color);
+    }
+    ::-webkit-scrollbar-track:active {
+        background: var(--main-bg-color);
+    }
+    ::-webkit-scrollbar-corner {
+        background: transparent;
+    }

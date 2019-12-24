@@ -1,0 +1,63 @@
+:root {
+	--mainBG: #182026;
+    --mainBGS: #283640;
+    --mainOFF: #7B9AA6;
+    --scrollbar: #283640;
+    --scrollbarOff: #436073;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: var(--mainBGS)
+
+}
+
+#header h2 {
+    margin: inherit;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    color: var(--mainOFF);
+}
+
+body {
+    font-family: "Tahoma";
+    background-color: var(--mainBG);
+    margin: 0px;
+}
+
+img  {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.box-shadow:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 1px;
+    z-index: -1;
+    transform: scale(.9);
+    box-shadow: 0px 0px 8px 2px #000000;
+}
+
+.epub-area {
+    width: 76%;
+    height: auto;
+    margin: 0 auto;
+    background-color: var(--mainBG);
+    text-align: center;
+}
+.epub-box {
+    width: 300px;
+    height: 400px;
+    margin: 2vh 2vh auto;
+    display: inline-block;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainBG)
+}
