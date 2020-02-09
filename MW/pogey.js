@@ -5,6 +5,8 @@ var nextPage = ('0000' + ("" + (currentPage + 1))).substring(("" + (currentPage 
 var prevPage = ('0000' + ("" + (currentPage - 1))).substring(("" + (currentPage - 1)).length);
 
 var newUrl;
+
+document.title = "Martial World Chapter " + currentPage;
 document.addEventListener('keydown', changePage);
 
 function changePage(e) {
