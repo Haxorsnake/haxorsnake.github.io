@@ -6,7 +6,7 @@ var prevPage = ('0000' + ("" + (currentPage - 1))).substring(("" + (currentPage 
 
 var newUrl;
 
-var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+var link = document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
     link.href = 'https://vignette.wikia.nocookie.net/martial-world/images/6/64/Favicon.ico/revision/latest?cb=20180714230041';
