@@ -17,16 +17,55 @@ favicon.href =
 document.getElementsByTagName("head")[0].appendChild(favicon);
 
 window.onload = function() {
+  var footerContent = document.createElement("p");
+  footerContent.id = "footercont";
+  footerContent.innerHTML = "0 / 100";
+  var wrapper = document.createElement("div");
+
+  wrapper.id = "wrapper";
+
+  for (let item of document.body.children) {
+    if (item.tagName != "script") {
+      wrapper.appendChild(item);
+    }
+  }
+
+  let child = document.body.firstElementChild;
+  while (child) {
+    if (child.tagName != "script") {
+      document.body.removeChild(child);
+      console.log("Removed Child!" + child.tagName);
+      child = document.body.firstElementChild;
+    } else {
+      break;
+    }
+  }
+
+  document.body.addEventListener("scroll", function() {
+    let percentage =
+      (document.body.scrollTop /
+        (document.body.scrollHeight - document.body.clientHeight)) *
+      100;
+    console.log(Math.round(percentage));
+    footerContent.innerHTML = `${Math.round(percentage)} / 100`;
+  });
+
+  document
+    .getElementsByTagName("body")[0]
+    .insertAdjacentElement("afterbegin", wrapper);
+
+  //Sidebar
   var main = document.createElement("div");
   var sidebarButton = document.createElement("button");
   var sidebar = document.createElement("div");
-  var sidebarContent = document.createElement('div');
+  var sidebarContent = document.createElement("div");
 
   main.id = "main";
   main.appendChild(sidebarButton);
 
   sidebarContent.className = "sidebarContent";
-  sidebarContent.innerHTML = '<object type="text/html" data="nav.xhtml" ></object>';
+  sidebarContent.innerHTML =
+    '<object type="text/html" data="nav.xhtml" ></object>';
 
   sidebar.id = "mySidebar";
   sidebar.className = "sidebar";
@@ -55,6 +94,32 @@ window.onload = function() {
   document
     .getElementsByTagName("body")[0]
     .insertAdjacentElement("afterbegin", sidebar);
+  //Sidebar END
+  //Footer
+  var footer = document.createElement("footer");
+  var footerButton = document.createElement("button");
+
+  footerButton.id = "footerButton";
+  footerButton.innerHTML = "∎";
+
+  footerButton.onclick = function() {
+    if (footer.style.backgroundColor) {
+      footer.style.backgroundColor = "";
+      footerButton.style.backgroundColor = "";
+      footerContent.style.display = "";
+    } else {
+      footerContent.style.display = "contents";
+      footer.style.backgroundColor = "#283640";
+      footerButton.style.backgroundColor = "#283540";
+    }
+  };
+
+  footer.appendChild(footerButton);
+  footer.appendChild(footerContent);
+  footer.id = "footer";
+
+  document.body.appendChild(footer);
+  //Footer END
 };
 
 document.title = "Martial World Chapter " + currentPage;
