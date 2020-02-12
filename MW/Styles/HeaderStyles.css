@@ -5,12 +5,6 @@
   --scrollbar-off-color: #436073;
 }
 
-html {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
 h1,
 h2,
 h3,
@@ -89,23 +83,14 @@ p {
   margin-inline-end: 0px;
 }
 
-#wrapper {
-  overflow-y: auto;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5%;
-}
-
 body {
   background-color: var(--main-bg-color) !important;
   font-family: "Tahoma";
   line-height: 1.42857;
-  margin: 0;
-  padding-bottom: 50px;
-  box-sizing: border-box;
-  overflow-y: auto;
-  height: 100%;
-
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 .sidebar {
@@ -118,25 +103,6 @@ body {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-}
-
-#footercont {
-  font-size: 18px;
-  transition: 0.5s;
-}
-
-#footerButton {
-  font-size: 20px;
-  cursor: pointer;
-  height: 100%;
-  background-color: var(--main-bg-color);
-  color: white;
-  border: none;
-  transition: 0.5s;
-}
-
-#footerButton:focus {
-  outline: none;
 }
 
 .sidebarButton {
@@ -173,20 +139,9 @@ body {
   text-indent: 0%;
 }
 
-#footer {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30px;
-  position: fixed;
-  width: 100%;
-  transition: 0.5s;
-}
-
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
-  z-index: 1;
 }
 ::-webkit-scrollbar-button {
   width: 0px;
